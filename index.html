@@ -25,7 +25,7 @@
 		function timer() {
 			var timeDiff = expires - new Date();
 			timeDiff = 9000-timeDiff;
-			console.log(timeDiff, 'TIME DIFF');
+			//console.log(timeDiff, 'TIME DIFF');
 
 
 			if (timeDiff >= 9) {				
@@ -39,7 +39,7 @@
 			var seconds = seconds < 10 ? "0" + seconds : seconds;
 			var milliSeconds = milliSeconds < 10 ? "0" + milliSeconds : milliSeconds;
 
-			document.getElementById("timer").innerHTML = seconds + ":" + milliSeconds; 
+			//document.getElementById("timer").innerHTML = seconds + ":" + milliSeconds; 
 		}
 
 
@@ -53,13 +53,11 @@
 			//var milliSeconds = (new Date(timeDiff).getMilliseconds() / 10).toFixed(0);
 			document.getElementById("counter").innerHTML = counter; 
 			
-			if (counter === 10) {			
+			if (counter === 9) {			
 				//clearInterval(countdown);
 				counter=0;
 			}
-		}
-
-   
+		}   
 		
 	</script>
 

@@ -16,3 +16,13 @@
 	66.6666666% {background-position:bottom;}
 	100% {background-position:top;}
   }
+
+  #counter{
+	  font-family: Arial, Helvetica, sans-serif;
+	  color:#2d80ab;
+	  font-size: 16em;
+	  font-display: bold;
+	  position: fixed;
+	  bottom:25px;
+	  left:25px;
+  }
