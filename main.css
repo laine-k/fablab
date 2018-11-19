@@ -1,0 +1,18 @@
+.pacer {
+	width:500px;
+	height: 500px;
+	min-width:100px;
+	min-height: 100px;
+	margin:0 auto;
+	margin-top:15%;
+	border-radius: 50%;
+    background: linear-gradient(to top, #a1cce2 50%, #2d80ab 50%);
+    background-size: 100% 200%;
+	animation: slide 9s linear infinite;
+}
+@keyframes slide {	
+	0% {background-position:top;}
+	33.3333333% {background-position:bottom;}
+	66.6666666% {background-position:bottom;}
+	100% {background-position:top;}
+  }

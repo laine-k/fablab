@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+		<title>fablab projects</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
+	</head>
+	<body>
+		<div class="pacer"></div>
+		<div id="timer"></div>
+		<div id="counter"></div>
+	</body>
+	<script type="text/javascript">
+
+		var expires = new Date();
+		expires.setSeconds(expires.getSeconds()+9); // set timer to 9 seconds
+		var counter = setInterval(timer, 1);
+
+		function timer() {
+			var timeDiff = expires - new Date();
+			timeDiff = 9000-timeDiff;
+			console.log(timeDiff, 'TIME DIFF');
+
+
+			if (timeDiff >= 9) {				
+				expires = new Date();
+				expires.setSeconds(expires.getSeconds() +9);
+			}
+
+			var seconds = new Date(timeDiff).getSeconds();
+			var milliSeconds = (new Date(timeDiff).getMilliseconds() / 10).toFixed(0);
+
+			var seconds = seconds < 10 ? "0" + seconds : seconds;
+			var milliSeconds = milliSeconds < 10 ? "0" + milliSeconds : milliSeconds;
+
+			document.getElementById("timer").innerHTML = seconds + ":" + milliSeconds; 
+		}
+
+
+		var counter = 0;
+		document.getElementById("counter").innerHTML = counter; 
+		var countdown = setInterval(startCounting, 1000);
+		function startCounting(){
+			//console.log(counter);
+			counter++
+			//var seconds = new Date(timeDiff).getSeconds();
+			//var milliSeconds = (new Date(timeDiff).getMilliseconds() / 10).toFixed(0);
+			document.getElementById("counter").innerHTML = counter; 
+			
+			if (counter === 10) {			
+				//clearInterval(countdown);
+				counter=0;
+			}
+		}
+
+   
+		
+	</script>
+
+</html>
