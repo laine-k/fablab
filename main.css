@@ -13,7 +13,7 @@
 @keyframes slide {	
 	0% {background-position:top;}
 	33.3333333% {background-position:bottom;}
-	66.6666666% {background-position:bottom;}
+	66.66666666% {background-position:bottom;}
 	100% {background-position:top;}
   }
 
