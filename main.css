@@ -1,4 +1,4 @@
-.pacer {
+#pacer {
 	width:500px;
 	height: 500px;
 	min-width:100px;
@@ -8,6 +8,9 @@
 	border-radius: 50%;
     background: linear-gradient(to top, #a1cce2 50%, #2d80ab 50%);
     background-size: 100% 200%;
+	
+}
+.moving{
 	animation: slide 9s linear infinite;
 }
 @keyframes slide {	
@@ -25,4 +28,9 @@
 	  position: fixed;
 	  bottom:25px;
 	  left:25px;
+  }
+  .buttons{
+	position: fixed;
+	bottom:25px;
+	right:25px;
   }

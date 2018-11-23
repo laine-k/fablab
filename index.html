@@ -12,9 +12,13 @@
 
 	</head>
 	<body>
-		<div class="pacer"></div>
+		<div id="pacer"></div>
 		<div id="timer"></div>
 		<div id="counter"></div>
+		<div class="buttons">
+			<button onclick="startAnimation()">Start</button>
+			<button onclick="stopAnimation()">Stop</button>
+		</div>		
 	</body>
 	<script type="text/javascript">
 
@@ -58,6 +62,12 @@
 				counter=0;
 			}
 		}   
+		function startAnimation(){
+			document.getElementById('pacer').classList.add('moving');
+		}
+		function stopAnimation(){
+			document.getElementById('pacer').className ='still';
+		}
 		
 	</script>
 
