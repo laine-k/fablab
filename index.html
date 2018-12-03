@@ -12,13 +12,17 @@
 
 	</head>
 	<body>
-		<div id="pacer"></div>
+		<div id="pacer" class="moving"></div>
 		<div id="timer"></div>
-		<div id="counter"></div>
+		<!--<div id="counter"></div>-->
 		<div class="buttons">
 			<button onclick="startAnimation()">Start</button>
 			<button onclick="stopAnimation()">Stop</button>
-		</div>		
+			<audio controls>
+				<source src="sound.mp3" type="audio/mpeg">
+			  </audio>	
+		</div>
+			
 	</body>
 	<script type="text/javascript">
 
@@ -29,7 +33,6 @@
 		function timer() {
 			var timeDiff = expires - new Date();
 			timeDiff = 9000-timeDiff;
-			//console.log(timeDiff, 'TIME DIFF');
 
 
 			if (timeDiff >= 9) {				
@@ -57,7 +60,7 @@
 			//var milliSeconds = (new Date(timeDiff).getMilliseconds() / 10).toFixed(0);
 			document.getElementById("counter").innerHTML = counter; 
 			
-			if (counter === 9) {			
+			if (counter === 12) {			
 				//clearInterval(countdown);
 				counter=0;
 			}

@@ -11,12 +11,13 @@
 	
 }
 .moving{
-	animation: slide 9s linear infinite;
+	animation: slide 12s linear infinite;
 }
 @keyframes slide {	
 	0% {background-position:top;}
-	33.3333333% {background-position:bottom;}
-	66.66666666% {background-position:bottom;}
+	25% {background-position:bottom;}
+	50% {background-position:bottom;}
+	75% {background-position:top;}
 	100% {background-position:top;}
   }
 
