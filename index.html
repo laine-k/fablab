@@ -16,9 +16,11 @@
 		<div id="timer"></div>
 		<!--<div id="counter"></div>-->
 		<div class="buttons">
-			<button onclick="startAnimation()">Start</button>
-			<button onclick="stopAnimation()">Stop</button>
-			<audio controls>
+			<button onclick="startAnimation()">Start animation</button>
+			<button onclick="stopAnimation()">Stop animation</button>
+			<button onclick="startBoth()">Start both</button>
+			<button onclick="stopBoth()">Stop both</button>
+			<audio controls id="audioPlayer">
 				<source src="sound.mp3" type="audio/mpeg">
 			  </audio>	
 		</div>
@@ -69,6 +71,14 @@
 			document.getElementById('pacer').classList.add('moving');
 		}
 		function stopAnimation(){
+			document.getElementById('pacer').className ='still';
+		}
+		function startBoth(){
+			document.getElementById('audioPlayer').play();
+			document.getElementById('pacer').classList.add('moving');
+		}
+		function stopBoth(){
+			document.getElementById('audioPlayer').pause();
 			document.getElementById('pacer').className ='still';
 		}
 		
