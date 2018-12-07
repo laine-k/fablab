@@ -16,60 +16,28 @@
 		<div id="timer"></div>
 		<!--<div id="counter"></div>-->
 		<div class="buttons">
-				<button onclick="startBoth()">Start both</button>
-				<button onclick="stopBoth()">Stop both</button>
+				
 			<button onclick="startAnimation()">Start animation</button>
 			<button onclick="stopAnimation()">Stop animation</button>
 			
 			<audio controls id="audioPlayer">
 				<source src="sound.mp3" type="audio/mpeg">
 			  </audio>	
+			  <audio controls id="beep">
+				<source src="beep.mp3" type="audio/mpeg">
+			  </audio>	
 		</div>
 			
 	</body>
 	<script type="text/javascript">
 
-		var expires = new Date();
-		expires.setSeconds(expires.getSeconds()+9); // set timer to 9 seconds
-		var counter = setInterval(timer, 1);
-
-		function timer() {
-			var timeDiff = expires - new Date();
-			timeDiff = 9000-timeDiff;
+	
 
 
-			if (timeDiff >= 9) {				
-				expires = new Date();
-				expires.setSeconds(expires.getSeconds() +9);
-			}
-
-			var seconds = new Date(timeDiff).getSeconds();
-			var milliSeconds = (new Date(timeDiff).getMilliseconds() / 10).toFixed(0);
-
-			var seconds = seconds < 10 ? "0" + seconds : seconds;
-			var milliSeconds = milliSeconds < 10 ? "0" + milliSeconds : milliSeconds;
-
-			//document.getElementById("timer").innerHTML = seconds + ":" + milliSeconds; 
-		}
-
-
-		var counter = 0;
-		document.getElementById("counter").innerHTML = counter; 
-		var countdown = setInterval(startCounting, 1000);
-		function startCounting(){
-			//console.log(counter);
-			counter++
-			//var seconds = new Date(timeDiff).getSeconds();
-			//var milliSeconds = (new Date(timeDiff).getMilliseconds() / 10).toFixed(0);
-			document.getElementById("counter").innerHTML = counter; 
-			
-			if (counter === 12) {			
-				//clearInterval(countdown);
-				counter=0;
-			}
-		}   
+	
 		function startAnimation(){
 			document.getElementById('pacer').classList.add('moving');
+			setTimeout(function(){ document.getElementById('beep').play();stopAnimation(); }, 72000);
 		}
 		function stopAnimation(){
 			document.getElementById('pacer').className ='still';
@@ -82,6 +50,7 @@
 			document.getElementById('audioPlayer').pause();
 			document.getElementById('pacer').className ='still';
 		}
+		
 		
 	</script>
 

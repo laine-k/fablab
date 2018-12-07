@@ -13,6 +13,9 @@
 .moving{
 	animation: slide 12s linear infinite;
 }
+#beep{
+	visibility: hidden;
+}
 @keyframes slide {	
 	0% {background-position:top;}
 	25% {background-position:bottom;}
